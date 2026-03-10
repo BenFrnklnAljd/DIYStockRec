@@ -2,8 +2,7 @@ import jsPDF from 'jspdf'
 import { SaleEntry, FlatLogItem } from '../types'
 import { parseCurrency, formatDate } from '../utils/format'
 import {
-  LIGHT,
-  A4_W, A4_H, MARGIN, CONTENT_W, CARD_H,
+  LIGHT, A4_W, A4_H, MARGIN, CONTENT_W, CARD_H,
   drawA4Header, drawA4EntryCard, drawA4TotalBlock, drawA4Footer,
   drawTableHeader, drawTableRow,
 } from './pdfDrawing'
