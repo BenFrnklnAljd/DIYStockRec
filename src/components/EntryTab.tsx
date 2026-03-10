@@ -10,12 +10,12 @@ interface EntryTabProps {
 const today = new Date().toISOString().split('T')[0]
 
 const defaultEntries: SaleEntry[] = [
-  { label: 'Sale Entry 1', amount: '', date: today },
-  { label: 'Sale Entry 2', amount: '', date: today },
+  { label: 'FRANK', amount: '', date: today },
+  { label: 'FRANKLIN', amount: '', date: today },
 ]
 
 export default function EntryTab({ onSave }: EntryTabProps) {
-  const [reportTitle, setReportTitle] = useState<string>('Sales Report')
+  const [reportTitle, setReportTitle] = useState<string>('WIFI VENDO SALES')
   const [entries, setEntries]         = useState<SaleEntry[]>(defaultEntries)
   const [saved, setSaved]             = useState<boolean>(false)
 

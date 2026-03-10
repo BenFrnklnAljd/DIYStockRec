@@ -151,6 +151,7 @@ export function drawTableHeader(doc: jsPDF, y: number, COL: Record<string, { x: 
   doc.setFontSize(8.5)
   doc.setTextColor(...GREY)
 
+  doc.text('#',      COL.seq.x + 6,    labelY)
   doc.text('Date',   COL.date.x + 6,   labelY)
   doc.text('Label',  COL.label.x + 6,  labelY)
   doc.text('Type',   COL.type.x + 6,   labelY)
@@ -185,6 +186,11 @@ export function drawTableRow(
   doc.line(MARGIN, y + ROW_H, MARGIN + TABLE_W, y + ROW_H)
 
   const textY = y + ROW_H / 2 + 4
+
+  doc.setFont('helvetica', 'normal')
+  doc.setFontSize(9)
+  doc.setTextColor(...GREY)
+  doc.text(String(rowIndex + 1), COL.seq.x + 6, textY)
 
   doc.setFont('helvetica', 'normal')
   doc.setFontSize(9)

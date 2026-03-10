@@ -78,12 +78,13 @@ export function buildLogExportPDF(
   const grandTotal = allEntries.reduce((s, e) => s + parseCurrency(e.amount), 0)
 
   const COL = {
-    date:   { x: MARGIN,        w: 90  },
-    label:  { x: MARGIN + 90,   w: 145 },
-    type:   { x: MARGIN + 235,  w: 75  },
-    note:   { x: MARGIN + 310,  w: 110 },
-    amount: { x: MARGIN + 420,  w: 75  },
-  }
+  seq:    { x: MARGIN,        w: 30  },
+  date:   { x: MARGIN + 30,   w: 90  },
+  label:  { x: MARGIN + 120,  w: 130 },
+  type:   { x: MARGIN + 250,  w: 70  },
+  note:   { x: MARGIN + 320,  w: 100 },
+  amount: { x: MARGIN + 420,  w: 75  },
+}
   const TABLE_W     = CONTENT_W
   const ROW_H       = 36
   const HEADER_H    = 30
